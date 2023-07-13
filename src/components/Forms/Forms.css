@@ -1,0 +1,30 @@
+.forms-item {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items:flex-start;
+  text-align: center;
+  flex-wrap: wrap;
+  align-content: space-around;
+  /* border: 4px solid red; */
+  width: 40%;
+  margin-left: 30%;
+  background-color: rgb(205, 205, 214);
+  border-radius: 12px;
+  gap: 0.3rem;
+}
+
+.forms-username {
+  border-radius: 5px;
+}
+.forms-age {
+  border-radius: 5px;
+}
+
+button {
+  background-color:rgb(51, 52, 53);
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  margin-top: 0.3rem;
+}
