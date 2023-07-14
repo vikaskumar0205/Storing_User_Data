@@ -10,7 +10,7 @@ const InvalidByName = (props) => {
     <div className="invalid-name">
       <h2 className="invalid-heading">Invalid input</h2>
       <div className="invalid-message">
-        <p>Please enter a valid name and age (non-empty values) </p>
+        <p>Please enter a valid name,college and age (non-empty values) </p>
         <button type="button" onClick={invalidNameButtonHandler}>
           Okay
         </button>

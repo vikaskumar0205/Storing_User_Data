@@ -1,30 +1,36 @@
-import React, {useState} from "react";
+import React, { useRef} from "react";
 import "./Forms.css";
 
 const Forms = (props) => {
-  const [userName, setUserName] = useState('');
-  const [age, setAge] = useState('');
+  // const [userName, setUserName] = useState('');
+  // const [age, setAge] = useState('');
 
-  const usernameHandler=(e)=> {
-    e.preventDefault();
-    setUserName(e.target.value);
-  }
-
-  const ageHandler = (e)=> {
-    e.preventDefault();
-    setAge(e.target.value);
-  }
+  // instead of useState we can also use the useRef, 
+  // by using the useRef we also do the DOM manipulations
+  // but here we are only using for the purpose of reading.
+  const nameInpurRef = useRef();
+  const collegeInputRef = useRef();
+  const ageInpurRef = useRef();
 
   const formHandler=(e)=> {
     e.preventDefault();
+
+    // storing the default value
+    const userName = nameInpurRef.current.value;
+    const collegeName = collegeInputRef.current.value;
+    const age = ageInpurRef.current.value;
     // console.log(e.target.querySelectorAll('input').length);
     const list = {
       username:userName,
+      collegename:collegeName,
       age:age,
     }
     props.onFormData(list);
-    setUserName('');
-    setAge('');
+
+    // reseting the values
+    nameInpurRef.current.value='';
+    collegeInputRef.current.value = '';
+    ageInpurRef.current.value='';
   }
 
 
@@ -38,8 +44,20 @@ const Forms = (props) => {
           id="username"
           className="forms-username"
           placeholder="Enter your name..."
-          value={userName}
-          onChange={usernameHandler}
+          minLength={4}
+          maxLength={16}
+          ref={nameInpurRef}
+        />
+        <label htmlFor="college_name">College Name:</label>
+        <input
+          type="text"
+          name="college_name"
+          id="college_name"
+          className="forms-college__name"
+          placeholder="Enter your college name..."
+          minLength={4}
+          maxLength={16}
+          ref={collegeInputRef}
         />
 
         <label htmlFor="age">Age:</label>
@@ -50,8 +68,8 @@ const Forms = (props) => {
           className="forms-age"
           placeholder="Enter your age..."
           step={1}
-          value={age}
-          onChange={ageHandler}
+          max={150}
+          ref={ageInpurRef}
         />
 
         <button type="submit">Add User</button>

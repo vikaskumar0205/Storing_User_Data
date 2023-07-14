@@ -23,6 +23,11 @@
 .forms-username {
   border-radius: 5px;
 }
+
+.forms-college__name {
+  border-radius: 5px;
+}
+
 .forms-age {
   border-radius: 5px;
 }

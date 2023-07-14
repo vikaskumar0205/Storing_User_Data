@@ -12,6 +12,7 @@ const ItemList = (props) => {
           key={list.id}
           id={list.id}
           username={list.username}
+          collegename={list.collegename}
           age={list.age}
           onItemList={props.onItemList}
         />

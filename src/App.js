@@ -26,7 +26,11 @@ function App() {
 
   // console.log(listData+" "+ isValid + " " + isNegative );
   const formDatasHandler = (list) => {
-    if (list.username.trim().length === 0 && (list.age.trim().length === 0)) {
+    if (
+      (list.username.trim().length === 0 && !list.age.includes("-")) ||
+      (list.collegename.trim().length === 0 && !list.age.includes("-")) ||
+      list.age.trim().length === 0
+    ) {
       setIsValid(false);
       // setIsNegative(false);
     } else if (list.age.includes("-")) {
