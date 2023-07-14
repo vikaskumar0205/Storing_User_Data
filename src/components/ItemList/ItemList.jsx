@@ -1,16 +1,19 @@
 import "./ItemList.css";
 import Lists from "./Lists";
-import { v4 as uuidv4 } from "uuid";
 
 const ItemList = (props) => {
+  
   return (
-    <ul className="item-list__inner">
+    <ul className="item-list">
+      <h2>User List</h2> 
+      <hr /> 
       {props.listData.map((list) => (
         <Lists
-          key={uuidv4()}
-          id={uuidv4()}
+          key={list.id}
+          id={list.id}
           username={list.username}
           age={list.age}
+          onItemList={props.onItemList}
         />
       ))}
     </ul>

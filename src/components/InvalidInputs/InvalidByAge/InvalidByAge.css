@@ -10,7 +10,8 @@
   color: white;
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
-  text-align:center;
+  text-align:left;
+  padding: 1rem;
 }
 
 .invalid-age__message>p {

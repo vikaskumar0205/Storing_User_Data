@@ -12,6 +12,12 @@
   background-color: rgb(205, 205, 214);
   border-radius: 12px;
   gap: 0.3rem;
+  margin-top: 1rem;
+}
+
+.forms-item>input {
+  width: 50%;
+  padding: 0.3rem;
 }
 
 .forms-username {
@@ -22,9 +28,12 @@
 }
 
 button {
-  background-color:rgb(51, 52, 53);
+  background-color:rgb(94, 29, 94);
   color: white;
   border-radius: 5px;
   margin-bottom: 1rem;
   margin-top: 0.3rem;
+  padding: 0.3rem 1rem;
+  border: 1px solid white;
+  
 }

@@ -31,22 +31,24 @@ const Forms = (props) => {
   return (
     <div className="forms">
       <form action="#" className="forms-item" onSubmit={formHandler}>
-        <label htmlFor="username">Name:</label>
+        <label htmlFor="username">Username:</label>
         <input
           type="text"
           name="username"
           id="username"
           className="forms-username"
+          placeholder="Enter your name..."
           value={userName}
           onChange={usernameHandler}
         />
 
-        <label htmlFor="#">Age:</label>
+        <label htmlFor="age">Age:</label>
         <input
           type="number"
           name="age"
           id="age"
           className="forms-age"
+          placeholder="Enter your age..."
           step={1}
           value={age}
           onChange={ageHandler}
