@@ -36,7 +36,9 @@ const Forms = (props) => {
 
   return (
     <div className="forms">
+      
       <form action="#" className="forms-item" onSubmit={formHandler}>
+        <h2>User data</h2>
         <label htmlFor="username">Username:</label>
         <input
           type="text"
